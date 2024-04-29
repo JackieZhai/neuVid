@@ -654,6 +654,7 @@ def process_layer_source_hemibrain(layer, url_mid):
         segments = layer_segments(layer)
         segments_processed = []
         for id in segments:
+            id = int(id)
             if 0 < id and id < len(roiIdToName):
                 segments_processed.append(roiIdToName[id])
         set_layer_segments(layer, segments_processed)
